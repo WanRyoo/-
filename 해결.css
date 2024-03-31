@@ -1,0 +1,172 @@
+@import url(reset.css);
+*{margin: 0; padding: 0;  list-style: none;}
+a{
+    display: block;text-decoration: none;color: #fff;
+}
+
+body{
+    padding: 0 3rem;
+}
+
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+/* 모바일 css */
+
+/* 인포 */
+/* section>ul>li>a>img */
+
+.info_section{
+    order: 1;
+    width: 100%;
+    background-color: #2ecc71;
+    text-align: center;
+}
+
+.info_list{
+    display: flex;
+    padding: 1rem;
+}
+
+.info_list>li{
+    flex: 1;
+}
+
+
+/* 헤더 */
+/* header > h1>a , nav>ul>li> a(글자),span(서브메뉴) > span(메뉴토글) */
+
+.header{
+    order: 2;
+    width: 100%;
+    position: relative;
+    background-color: #2ecc71;
+}
+.logo{
+    /* width: 100%; */
+    font-size: 24px;
+    text-align: center;
+}
+.logo a{
+    padding: 28px 0;
+}
+.nav{
+    width: 100%;
+}
+.gnb{
+    background-color: #2c3e50;
+}
+.gnb>li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem;
+}
+.gnb a{
+    width: 80%;
+    
+}
+.sub_menu_toggle_btn{
+    width: 20%;
+    text-indent: -9999px;
+    background: url(../images2/s_images/sub_menu_toggle_btn.png) no-repeat right;
+
+}
+
+.menu_toggle_btn{
+    position: absolute;
+    width: 30px;
+    height: 39px;
+    top: 10px;
+    right: 10px;
+    text-indent: -9999px;
+    background: url(../images2/s_images/menu_toggle_btn.png) no-repeat ;
+}
+
+/* 태블릿 */
+
+@media all and (min-width:766px) {
+    /* 헤더 */
+
+    .header{
+        display: flex;
+    }
+    .logo{
+        position: absolute;
+        width: 15%;
+        top: 0;
+        left: 0;
+        background-color:#2ecc71 ;
+    }
+    .logo a{
+        padding: 50px 10px;
+    }
+
+    .nav{
+        height: 80px;
+    }
+
+    .gnb{
+        width: 40%;
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+}
+
+/* pc  */
+@media all and (min-width:900px) {
+
+    .wrap{
+        position: relative;
+    }
+
+    /* 인포 */
+    .info_section{
+        order: 0;
+        width: auto;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 99;
+    }
+    .info_list{
+        padding: 0;
+    }
+
+    /* 헤더 */
+    
+/* header > h1>a , nav>ul>li> a(글자),span(서브메뉴) > span(메뉴토글) */
+
+    .header{
+        order: 1;
+        justify-content: flex-end;
+    }
+
+    .nav{
+        margin: 0 50rem 0 0
+    }
+    .gnb{
+        width: 100%;
+        background-color: #2ecc71;
+        position: static;
+        height: 80px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .gnb a{
+        width: 100%;
+
+    }
+
+
+    .menu_toggle_btn{
+        display: none;
+    }
+    .sub_menu_toggle_btn{
+        display: none;
+    }
+
+}
+
